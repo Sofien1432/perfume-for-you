@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#090909">
+<title>PERFUME FOR YOU | متجر العطور</title>
+<style>
+:root{--bg:#090909;--panel:#141414;--panel2:#1c1a16;--gold:#d6a84f;--gold2:#f3d58d;--text:#f7f2e8;--muted:#b8b0a2;--line:#3b3020;--green:#72c58b}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 50% -10%,#332515 0,#090909 42%);color:var(--text);font-family:Tahoma,Arial,sans-serif}button,input,select,textarea{font:inherit}button{cursor:pointer}.wrap{max-width:1200px;margin:auto;padding:0 18px}
+header{position:sticky;top:0;z-index:10;background:#090909ed;border-bottom:1px solid var(--line);backdrop-filter:blur(12px)}.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:12px}.brand{display:flex;align-items:center;gap:10px;color:var(--gold2);font-family:Georgia,serif;font-weight:bold;letter-spacing:2px}.crown{font-size:28px}.brand span:last-child{display:block;font-size:19px;line-height:1.1}.brand small{display:block;font-size:10px;letter-spacing:4px;text-align:center;color:var(--gold)}.nav-actions{display:flex;gap:8px}.btn{border:1px solid var(--gold);background:linear-gradient(135deg,#f0cc78,#b9812d);color:#17110a;padding:11px 17px;border-radius:999px;font-weight:bold}.btn.ghost{background:transparent;color:var(--gold2)}.iconbtn{background:#191713;color:var(--gold2);border:1px solid var(--line);padding:10px 14px;border-radius:12px}
+.hero{padding:58px 0 42px;display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:25px}.eyebrow{color:var(--gold);letter-spacing:3px;font-size:12px}.hero h1{font-size:clamp(35px,5vw,62px);line-height:1.2;margin:14px 0}.hero h1 em{font-style:normal;color:var(--gold2)}.hero p{color:var(--muted);line-height:2;max-width:580px}.hero-art{min-height:300px;border:1px solid #69502b;border-radius:24px;background:linear-gradient(145deg,#21170e,#080808 65%);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}.hero-art:before{content:"";position:absolute;width:250px;height:250px;border-radius:50%;background:#c18c3a33;filter:blur(45px)}.bottle{position:relative;width:145px;height:210px;border:2px solid #d7ad60;border-radius:24px 24px 32px 32px;background:linear-gradient(90deg,#17120d,#5d421d 48%,#100d09);box-shadow:0 25px 55px #000, inset 0 0 22px #e9c27655;display:flex;align-items:center;justify-content:center;text-align:center;color:#f2d18a;font-family:Georgia,serif;font-size:15px;letter-spacing:2px}.bottle:before{content:"";position:absolute;top:-35px;width:48px;height:38px;border-radius:7px 7px 2px 2px;background:linear-gradient(90deg,#9b722f,#f2d58b,#76501c)}.bottle:after{content:"";position:absolute;top:-48px;width:35px;height:14px;border-radius:5px;background:#b58a43}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:15px;margin:25px 0 18px}.section-head h2{margin:0;color:var(--gold2);font-size:25px}.section-head p{margin:6px 0 0;color:var(--muted);font-size:13px}.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}.chip{border:1px solid var(--line);background:#15130f;color:#e8d9bd;padding:9px 14px;border-radius:30px}.chip.active{background:var(--gold);color:#17110a;border-color:var(--gold)}.search{width:min(100%,320px);background:#151515;border:1px solid var(--line);color:white;border-radius:30px;padding:12px 16px;outline:none}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.card{background:linear-gradient(160deg,#1b1915,#101010);border:1px solid var(--line);border-radius:17px;overflow:hidden;transition:.2s}.card:hover{transform:translateY(-3px);border-color:#9c7438}.product-art{height:165px;display:flex;align-items:center;justify-content:center;background:radial-gradient(circle,#4b351c,#17120c 65%,#0c0b09)}.mini-bottle{height:105px;width:66px;border:2px solid #c59a4c;border-radius:12px 12px 15px 15px;background:linear-gradient(90deg,#101010,#40301b,#0b0b0b);box-shadow:0 12px 22px #000;position:relative}.mini-bottle:before{content:"";position:absolute;width:25px;height:18px;top:-19px;left:18px;background:#bd9146;border-radius:4px 4px 0 0}.mini-bottle:after{content:"PFY";position:absolute;top:40px;left:0;right:0;text-align:center;font:10px Georgia;color:#e8c77e}
+.product-art svg{width:100%;height:100%;display:block}.card-body{padding:13px}.tag{font-size:11px;color:var(--gold);margin-bottom:7px}.card h3{font-size:15px;margin:0 0 8px}.desc{font-size:12px;color:var(--muted);min-height:34px;line-height:1.6}.price-row{display:flex;justify-content:space-between;align-items:center;margin-top:12px}.price{color:var(--gold2);font-size:19px;font-weight:bold}.add{border:0;border-radius:9px;background:var(--gold);color:#17110a;padding:9px 11px;font-weight:bold}
+.benefits{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:35px 0}.benefit{background:#14120e;border:1px solid var(--line);padding:18px;border-radius:14px;text-align:center;color:var(--muted)}.benefit b{display:block;color:var(--gold2);margin-bottom:7px}
+footer{border-top:1px solid var(--line);padding:25px 0;color:var(--muted);text-align:center;font-size:12px;margin-top:45px}
+.overlay{display:none;position:fixed;inset:0;background:#000b;z-index:30;align-items:center;justify-content:center;padding:15px}.modal{width:min(560px,100%);max-height:90vh;overflow:auto;background:#15130f;border:1px solid #75572e;border-radius:18px;padding:22px;box-shadow:0 20px 80px #000}.modal h2{color:var(--gold2);margin-top:0}.close{float:left;background:none;border:0;color:white;font-size:24px}.field{display:grid;gap:6px;margin:12px 0}.field label{font-size:13px;color:#d9c9a9}.field input,.field select,.field textarea{width:100%;padding:12px;border-radius:10px;border:1px solid var(--line);background:#090909;color:white;outline:none}.cartline,.orderline{display:flex;justify-content:space-between;gap:10px;padding:10px 0;border-bottom:1px solid var(--line);font-size:13px}.qty button{background:#292116;border:1px solid var(--line);color:var(--gold2);border-radius:6px;padding:3px 8px}.total{display:flex;justify-content:space-between;color:var(--gold2);font-weight:bold;font-size:20px;padding:15px 0}.full{width:100%;margin-top:10px}.notice{background:#1d2a20;border:1px solid #426d4b;color:#b8edc3;padding:12px;border-radius:10px;line-height:1.7}.admin-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.stat{background:#211b12;padding:12px;border-radius:10px;text-align:center}.stat b{display:block;color:var(--gold2);font-size:22px}.muted{color:var(--muted);font-size:12px}
+@media(max-width:850px){.grid{grid-template-columns:repeat(3,1fr)}.hero{grid-template-columns:1fr}.hero-art{min-height:230px}}
+@media(max-width:600px){.grid{grid-template-columns:repeat(2,1fr);gap:10px}.product-art{height:135px}.card h3{font-size:13px}.desc{font-size:11px}.nav{height:66px}.brand span:last-child{font-size:15px}.nav .btn{padding:9px 11px;font-size:12px}.hero{padding-top:35px}.benefits{grid-template-columns:1fr}.section-head{align-items:start;flex-direction:column}.search{width:100%}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+ <div class="brand"><span class="crown">♛</span><span>PERFUME<small>FOR YOU</small></span></div>
+ <div class="nav-actions"><button class="iconbtn" onclick="openCart()">🛒 <span id="cartCount">0</span></button><button class="btn ghost" onclick="openAdmin()">لوحة التحكم</button></div>
+</div></header>
+<main class="wrap">
+<section class="hero">
+ <div><div class="eyebrow">LUXURY • ELEGANCE • YOUR STYLE</div><h1>عطرك… <em>توقيعك الخاص</em></h1><p>اكتشف مجموعتنا المختارة من العطور الرجالية والنسائية والمشتركة. أناقة كل يوم بسعر موحّد.</p><button class="btn" onclick="document.getElementById('catalog').scrollIntoView({behavior:'smooth'})">اكتشف المجموعة　←</button></div>
+ <div class="hero-art"><div class="bottle">PERFUME<br>FOR YOU</div></div>
+</section>
+<section id="catalog">
+ <div class="section-head"><div><h2>مجموعة العطور</h2><p>50 عطرًا معروفًا — السعر التجريبي 40 د.ت</p></div><input class="search" id="search" placeholder="ابحث عن عطر..." oninput="renderProducts()"></div>
+ <div class="filters"><button class="chip active" data-filter="الكل" onclick="setFilter('الكل',this)">الكل</button><button class="chip" data-filter="رجالي" onclick="setFilter('رجالي',this)">رجالي</button><button class="chip" data-filter="نسائي" onclick="setFilter('نسائي',this)">نسائي</button><button class="chip" data-filter="مشترك" onclick="setFilter('مشترك',this)">مشترك</button></div>
+ <div class="grid" id="products"></div>
+</section>
+<section class="benefits"><div class="benefit">✦<b>اختيارات متنوعة</b>روائح لكل الأذواق والمناسبات</div><div class="benefit">♢<b>سعر موحّد</b>40 دينار تونسي للعطر</div><div class="benefit">➤<b>طلب سهل</b>أرسل طلبك في خطوات بسيطة</div></section>
+</main>
+<footer><div class="wrap">♛ PERFUME FOR YOU — أناقتك تبدأ من عطرك<br><br>نسخة عرض تجريبية: أسماء العطور وروابط العلامات الرسمية للتعرّف على المنتجات. سعر 40 د.ت تجريبي وليس عرض بيع مؤكدًا. الصور الرسمية متاحة من صفحات العلامات؛ لا يعني ذلك توفر مخزون أصلي أو إثبات أصالة لدى المتجر.</div></footer>
+
+<div class="overlay" id="cartModal"><div class="modal"><button class="close" onclick="closeModal('cartModal')">×</button><h2>سلة المشتريات</h2><div id="cartItems"></div><div class="total"><span>المجموع</span><span id="cartTotal">0 د.ت</span></div><button class="btn full" onclick="checkout()">إتمام الطلب</button></div></div>
+<div class="overlay" id="checkoutModal"><div class="modal"><button class="close" onclick="closeModal('checkoutModal')">×</button><h2>معلومات التوصيل</h2><div class="muted">أدخل معلوماتك لإرسال الطلب.</div>
+<form id="orderForm" onsubmit="submitOrder(event)">
+<div class="field"><label>الاسم واللقب *</label><input name="name" required maxlength="80" placeholder="اسمك الكامل"></div>
+<div class="field"><label>رقم الهاتف *</label><input name="phone" required inputmode="tel" pattern="[0-9+ ]{8,16}" placeholder="رقم الهاتف"></div>
+<div class="field"><label>الولاية *</label><select name="city" required><option value="">اختر الولاية</option><option>تونس</option><option>أريانة</option><option>بن عروس</option><option>منوبة</option><option>نابل</option><option>زغوان</option><option>بنزرت</option><option>باجة</option><option>جندوبة</option><option>الكاف</option><option>سليانة</option><option>سوسة</option><option>المنستير</option><option>المهدية</option><option>صفاقس</option><option>القيروان</option><option>القصرين</option><option>سيدي بوزيد</option><option>قابس</option><option>مدنين</option><option>تطاوين</option><option>قفصة</option><option>توزر</option><option>قبلي</option></select></div>
+<div class="field"><label>العنوان بالتفصيل *</label><textarea name="address" required rows="3" placeholder="المدينة، الحي، الشارع..."></textarea></div>
+<div class="field"><label>ملاحظات (اختياري)</label><textarea name="notes" rows="2" placeholder="ملاحظات حول الطلب"></textarea></div>
+<div class="total"><span>المبلغ الجملي</span><span id="checkoutTotal">0 د.ت</span></div><button class="btn full" type="submit">تأكيد الطلب</button>
+</form></div></div>
+<div class="overlay" id="successModal"><div class="modal"><h2>✓ تم تسجيل الطلب تجريبيًا</h2><div class="notice" id="successText"></div><button class="btn full" onclick="closeModal('successModal')">موافق</button></div></div>
+<div class="overlay" id="adminLoginModal"><div class="modal"><button class="close" onclick="closeModal('adminLoginModal')">×</button><h2 id="adminLoginTitle">دخول صاحب المتجر</h2><p class="muted" id="adminLoginHint">أدخل كلمة مرور لوحة التحكم.</p><form onsubmit="adminLogin(event)"><div class="field"><label id="adminPasswordLabel">كلمة المرور</label><input id="adminPassword" type="password" required minlength="6" autocomplete="current-password" placeholder="6 أحرف على الأقل"></div><button class="btn full" id="adminLoginButton" type="submit">دخول</button></form><p class="muted">في هذه النسخة التجريبية، كلمة المرور محفوظة في هذا المتصفح فقط.</p></div></div>
+<div class="overlay" id="adminModal"><div class="modal"><button class="close" onclick="closeModal('adminModal')">×</button><h2>لوحة إدارة الطلبات</h2><div class="muted">لوحة محمية بكلمة مرور على هذا المتصفح. هذه حماية تجريبية محلية وليست تسجيل دخول آمنًا لخادم عام.</div><div class="admin-stats" style="margin:15px 0"><div class="stat"><b id="statAll">0</b>كل الطلبات</div><div class="stat"><b id="statNew">0</b>جديدة</div><div class="stat"><b id="statDone">0</b>مكتملة</div></div><div id="adminOrders"></div><button class="btn ghost full" onclick="clearOrders()">مسح طلبات التجربة</button></div></div>
+
+<script>
+const products = [
+  {
+    "id": 1,
+    "name": "Dior Sauvage Elixir",
+    "type": "رجالي",
+    "brand": "Dior",
+    "desc": "عطر من Dior — صفحة العلامة الرسمية",
+    "price": 40,
+    "source": "https://www.dior.com/en_int/beauty/fragrance/mens-fragrance/sauvage"
+  },
+  {
+    "id": 2,
+    "name": "Dior Sauvage Eau de Parfum",
+    "type": "رجالي",
+    "brand": "Dior",
+    "desc": "عطر من Dior — صفحة العلامة الرسمية",
+    "price": 40,
+    "source": "https://www.dior.com/en_int/beauty/fragrance/mens-fragrance/sauvage"
+  },
+  {
+    "id": 3,
+    "name": "Dior Homme Intense",
+    "type": "رجالي",
+    "brand": "Dior",
+    "desc": "عطر من Dior — صفحة العلامة الرسمية",
+    "price": 40,
+    "source": "https://www.dior.com"
+  },
+  {
+    "id": 4,
+    "name": "Dior Fahrenheit",
+    "type": "رجالي",
+    "brand": "Dior",
+    "desc": "عطر من Dior — صفحة العلامة الرسمية",
+    "price": 40,
+    "source": "https://www.dior.com"
+  },
+  {
+    "id": 5,
+    "name": "Bleu de Chanel Eau de Parfum",
+    "type": "رجالي",
+    "brand": "CHANEL",
+    "desc": "عطر من CHANEL — صفحة العلامة الرسمية",
+    "price": 40,
+    "source": "https://www.chanel.com/fr/parfums/bleu-de-chanel/"
+  },
+  {
+    "id": 6,
+    "name": "Allure Homme Sport",
+    "type": "رجالي",
+    "brand": "CHANEL",
+    "desc": "عطر من CHANEL — صفحة العلامة الرسمية",
+    "price": 40,
+    "source": "https://www.chanel.com"
+  },
+  {
+    "id": 7,
+    "name": "Y Eau de Parfum",
+    "type": "رجالي",
+    "brand": "Yves Saint Laurent",
+    "desc": "عطر من Yves Saint Laurent — صفحة العلامة الرسمية",
+    "price": 40,
+    "source": "https://www.yslbeauty.com/int/fragrance/"
+  },
+  {
+    "id": 8,
+    "name": "La Nuit de L’Homme",
+    "type": "رجالي",
+    "brand": "Yves Saint Laurent",
+    "desc": "عطر من Yves Saint Laurent — صفحة العلامة الرسمية",
+    "price": 40,
+    "source": "https://www.yslbeauty.com"
+  },
+  {
+    "id": 9,
+    "name": "Armani Acqua di Giò Profondo",
+    "type": "رجالي",
+    "brand": "Giorgio Armani",
+    "desc": "عطر من Giorgio Armani — صفحة العلامة الرسمية",
+    "price": 40,
+    "source": "https://www.armani-beauty.com"
+  },
+  {
+    "id": 10,
+    "name": "Armani Stronger With You Intensely",
+    "type": "رجالي",
+    "brand": "Giorgio Armani",
+    "desc": "عطر من Giorgio Armani — صفحة العلامة الرسمية",
+    "price": 40,
+    "source": "https://www.armani-beauty.com"
+  },
+  {
+    "id": 11,
+    "name": "Versace Eros Eau de Parfum",
+    "type": "رجالي",
+    "brand": "Versace",
+    "desc": "عطر من Versace — صفحة العلامة الرسمية",
+    "price": 40,
+    "source": "https://www.versace.com"
+  },
+  {
+    "id": 12,
+    "name": "Versace Dylan Blue",
+    "type": "رجالي",
+    "brand": "Versace",
+    "desc": "عطر من Versace — صفحة العلامة الرسمية",
+    "price": 40,
+    "source": "https://www.versace.com"
+  },
+  {
+    "id": 13,
+    "name": "Jean Paul Gaultier Le Male Le Parfum",
+    "type": "رجالي",
+    "brand": "Jean Paul Gaultier",
+    "desc": "عطر من Jean Paul Gaultier — صفحة العلامة الرسمية",
+    "price": 40,
+    "source": "https://www.jeanpaulgaultier.com"
+  },
+  {
+    "id": 14,
+    "name": "Jean Paul Gaultier Ultra Male",
+    "type": "رجالي",
+    "brand": "Jean Paul Gaultier",
+    "desc": "عطر من Jean Paul Gaultier — صفحة العلامة الرسمية",
+    "price": 40,
+    "source": "https://www.jeanpaulgaultier.com"
+  },
+  {
+    "id": 15,
+    "name": "Paco Rabanne 1 Million",
+    "type": "رجالي",
+    "brand": "Rabanne",
+    "desc": "عطر من Rabanne — صفحة العلامة الرسمية",
+    "price": 40,
+    "source": "https://www.rabanne.com"
+  },
+  {
+    "id": 16,
+    "name": "Paco Rabanne Invictus",
+    "type": "رجالي",
+    "brand": "Rabanne",
+    "desc": "عطر من Rabanne — صفحة العلامة الرسمية",
+    "price": 40,
+    "source": "https://www.rabanne.com"
+  },
+  {
+    "id": 17,
+    "name": "Hugo Boss Bottled",
+    "type": "رجالي",
+    "brand": "Hugo Boss",
+    "desc": "عطر من Hugo Boss — صفحة العلامة الرسمية",
+    "price": 40,
+    "source": "https://www.hugoboss.com"
+  },
+  {
+    "id": 18,
+    "name": "Givenchy Gentleman Réserve Privée",
+    "type": "رجالي",
+    "brand": "Givenchy",
+    "desc": "عطر من Givenchy — صفحة العلامة الرسمية",
+    "price": 40,
+    "source": "https://www.givenchybeauty.com"
+  },
+  {
+    "id": 19,
+    "name": "Azzaro The Most Wanted",
+    "type": "رجالي",
+    "brand": "Azzaro",
+    "desc": "عطر من Azzaro — صفحة العلامة الرسمية",
+    "price": 40,
+    "source": "https://www.azzaro.com"
+  },
+  {
+    "id": 20,
+    "name": "Montblanc Explorer",
+    "type": "رجالي",
+    "brand": "Montblanc",
+    "desc": "عطر من Montblanc — صفحة العلامة الرسمية",
+    "price": 40,
+    "source": "https://www.montblanc.com"
+  },
+  {
+    "id": 21,
+    "name": "Miss Dior Eau de Parfum",
+    "type": "نسائي",
+    "brand": "Dior",
+    "desc": "عطر من Dior — صفحة العلامة الرسمية",
+    "price": 40,
+    "source": "https://www.dior.com"
+  },
+  {
+    "id": 22,
+    "name": "Dior J’adore Eau de Parfum",
+    "type": "نسائي",
+    "brand": "Dior",
+    "desc": "عطر من Dior — صفحة العلامة الرسمية",
+    "price": 40,
+    "source": "https://www.dior.com"
+  },
+  {
+    "id": 23,
+    "name": "YSL Libre Eau de Parfum",
+    "type": "نسائي",
+    "brand": "Yves Saint Laurent",
+    "desc": "عطر من Yves Saint Laurent — صفحة العلامة الرسمية",
+    "price": 40,
+    "source": "https://www.yslbeauty.com/int/fragrance/fragrance-for-her/libre/libre-eau-de-parfum/3614272648425.html"
+  },
+  {
+    "id": 24,
+    "name": "YSL Black Opium",
+    "type": "نسائي",
+    "brand": "Yves Saint Laurent",
+    "desc": "عطر من Yves Saint Laurent — صفحة العلامة الرسمية",
+    "price": 40,
+    "source": "https://www.yslbeauty.com"
+  },
+  {
+    "id": 25,
+    "name": "Chanel Coco Mademoiselle",
+    "type": "نسائي",
+    "brand": "CHANEL",
+    "desc": "عطر من CHANEL — صفحة العلامة الرسمية",
+    "price": 40,
+    "source": "https://www.chanel.com"
+  },
+  {
+    "id": 26,
+    "name": "Chanel Chance Eau Tendre",
+    "type": "نسائي",
+    "brand": "CHANEL",
+    "desc": "عطر من CHANEL — صفحة العلامة الرسمية",
+    "price": 40,
+    "source": "https://www.chanel.com"
+  },
+  {
+    "id": 27,
+    "name": "Gucci Bloom Eau de Parfum",
+    "type": "نسائي",
+    "brand": "Gucci",
+    "desc": "عطر من Gucci — صفحة العلامة الرسمية",
+    "price": 40,
+    "source": "https://www.gucci.com/fr/fr/pr/beauty/fragrances/fragrances-for-women/gucci-bloom/gucci-bloom-100ml-eau-de-parfum-p-488830999990099"
+  },
+  {
+    "id": 28,
+    "name": "Gucci Flora Gorgeous Gardenia",
+    "type": "نسائي",
+    "brand": "Gucci",
+    "desc": "عطر من Gucci — صفحة العلامة الرسمية",
+    "price": 40,
+    "source": "https://www.gucci.com"
+  },
+  {
+    "id": 29,
+    "name": "Lancôme La Vie Est Belle",
+    "type": "نسائي",
+    "brand": "Lancôme",
+    "desc": "عطر من Lancôme — صفحة العلامة الرسمية",
+    "price": 40,
+    "source": "https://www.lancome-usa.com"
+  },
+  {
+    "id": 30,
+    "name": "Lancôme Idôle",
+    "type": "نسائي",
+    "brand": "Lancôme",
+    "desc": "عطر من Lancôme — صفحة العلامة الرسمية",
+    "price": 40,
+    "source": "https://www.lancome-usa.com"
+  },
+  {
+    "id": 31,
+    "name": "Carolina Herrera Good Girl",
+    "type": "نسائي",
+    "brand": "Carolina Herrera",
+    "desc": "عطر من Carolina Herrera — صفحة العلامة الرسمية",
+    "price": 40,
+    "source": "https://www.carolinaherrera.com"
+  },
+  {
+    "id": 32,
+    "name": "Carolina Herrera 212 VIP Rosé",
+    "type": "نسائي",
+    "brand": "Carolina Herrera",
+    "desc": "عطر من Carolina Herrera — صفحة العلامة الرسمية",
+    "price": 40,
+    "source": "https://www.carolinaherrera.com"
+  },
+  {
+    "id": 33,
+    "name": "Valentino Donna Born in Roma",
+    "type": "نسائي",
+    "brand": "Valentino Beauty",
+    "desc": "عطر من Valentino Beauty — صفحة العلامة الرسمية",
+    "price": 40,
+    "source": "https://www.valentino-beauty.com"
+  },
+  {
+    "id": 34,
+    "name": "Armani My Way",
+    "type": "نسائي",
+    "brand": "Giorgio Armani",
+    "desc": "عطر من Giorgio Armani — صفحة العلامة الرسمية",
+    "price": 40,
+    "source": "https://www.armani-beauty.com"
+  },
+  {
+    "id": 35,
+    "name": "Viktor&Rolf Flowerbomb",
+    "type": "نسائي",
+    "brand": "Viktor&Rolf",
+    "desc": "عطر من Viktor&Rolf — صفحة العلامة الرسمية",
+    "price": 40,
+    "source": "https://www.viktor-rolf.com"
+  },
+  {
+    "id": 36,
+    "name": "Chloé Eau de Parfum",
+    "type": "نسائي",
+    "brand": "Chloé",
+    "desc": "عطر من Chloé — صفحة العلامة الرسمية",
+    "price": 40,
+    "source": "https://www.chloe.com"
+  },
+  {
+    "id": 37,
+    "name": "Burberry Goddess",
+    "type": "نسائي",
+    "brand": "Burberry",
+    "desc": "عطر من Burberry — صفحة العلامة الرسمية",
+    "price": 40,
+    "source": "https://www.burberry.com"
+  },
+  {
+    "id": 38,
+    "name": "Mugler Alien Eau de Parfum",
+    "type": "نسائي",
+    "brand": "Mugler",
+    "desc": "عطر من Mugler — صفحة العلامة الرسمية",
+    "price": 40,
+    "source": "https://www.mugler.com"
+  },
+  {
+    "id": 39,
+    "name": "Dolce&Gabbana The One",
+    "type": "نسائي",
+    "brand": "Dolce&Gabbana",
+    "desc": "عطر من Dolce&Gabbana — صفحة العلامة الرسمية",
+    "price": 40,
+    "source": "https://www.dolcegabbana.com"
+  },
+  {
+    "id": 40,
+    "name": "Marc Jacobs Daisy",
+    "type": "نسائي",
+    "brand": "Marc Jacobs",
+    "desc": "عطر من Marc Jacobs — صفحة العلامة الرسمية",
+    "price": 40,
+    "source": "https://www.marcjacobs.com"
+  },
+  {
+    "id": 41,
+    "name": "Maison Francis Kurkdjian Baccarat Rouge 540",
+    "type": "مشترك",
+    "brand": "MFK",
+    "desc": "عطر من MFK — صفحة العلامة الرسمية",
+    "price": 40,
+    "source": "https://www.franciskurkdjian.com"
+  },
+  {
+    "id": 42,
+    "name": "Tom Ford Oud Wood",
+    "type": "مشترك",
+    "brand": "Tom Ford",
+    "desc": "عطر من Tom Ford — صفحة العلامة الرسمية",
+    "price": 40,
+    "source": "https://www.tomford.com"
+  },
+  {
+    "id": 43,
+    "name": "Tom Ford Tobacco Vanille",
+    "type": "مشترك",
+    "brand": "Tom Ford",
+    "desc": "عطر من Tom Ford — صفحة العلامة الرسمية",
+    "price": 40,
+    "source": "https://www.tomford.com"
+  },
+  {
+    "id": 44,
+    "name": "Maison Margiela Replica By the Fireplace",
+    "type": "مشترك",
+    "brand": "Maison Margiela",
+    "desc": "عطر من Maison Margiela — صفحة العلامة الرسمية",
+    "price": 40,
+    "source": "https://www.maisonmargiela-fragrances.eu"
+  },
+  {
+    "id": 45,
+    "name": "Le Labo Santal 33",
+    "type": "مشترك",
+    "brand": "Le Labo",
+    "desc": "عطر من Le Labo — صفحة العلامة الرسمية",
+    "price": 40,
+    "source": "https://www.lelabofragrances.com"
+  },
+  {
+    "id": 46,
+    "name": "Jo Malone Wood Sage & Sea Salt",
+    "type": "مشترك",
+    "brand": "Jo Malone London",
+    "desc": "عطر من Jo Malone London — صفحة العلامة الرسمية",
+    "price": 40,
+    "source": "https://www.jomalone.com"
+  },
+  {
+    "id": 47,
+    "name": "Creed Aventus",
+    "type": "مشترك",
+    "brand": "Creed",
+    "desc": "عطر من Creed — صفحة العلامة الرسمية",
+    "price": 40,
+    "source": "https://www.creedfragrance.com"
+  },
+  {
+    "id": 48,
+    "name": "Byredo Gypsy Water",
+    "type": "مشترك",
+    "brand": "Byredo",
+    "desc": "عطر من Byredo — صفحة العلامة الرسمية",
+    "price": 40,
+    "source": "https://www.byredo.com"
+  },
+  {
+    "id": 49,
+    "name": "Hermès Terre d’Hermès",
+    "type": "مشترك",
+    "brand": "Hermès",
+    "desc": "عطر من Hermès — صفحة العلامة الرسمية",
+    "price": 40,
+    "source": "https://www.hermes.com"
+  },
+  {
+    "id": 50,
+    "name": "Calvin Klein CK One",
+    "type": "مشترك",
+    "brand": "Calvin Klein",
+    "desc": "عطر من Calvin Klein — صفحة العلامة الرسمية",
+    "price": 40,
+    "source": "https://www.calvinklein.us"
+  }
+].map(p=>({...p}));
+let filter='الكل',cart=JSON.parse(localStorage.getItem('pfy_cart')||'{}'),orders=JSON.parse(localStorage.getItem('pfy_orders')||'[]');
+
+function productImage(p){
+ const hue=(p.id*37+18)%360, hue2=(hue+42)%360;
+ const shape=p.id%4, cap=p.id%5;
+ const bottleShape=shape===0?'M40 55 Q40 42 52 42 H88 Q100 42 100 55 V143 Q100 157 86 157 H54 Q40 157 40 143 Z':
+ shape===1?'M45 50 Q45 40 58 40 H82 Q95 40 95 50 L103 140 Q104 157 87 157 H53 Q36 157 37 140 Z':
+ shape===2?'M36 62 Q36 48 50 48 H90 Q104 48 104 62 V140 Q104 157 88 157 H52 Q36 157 36 140 Z':
+ 'M43 54 Q43 43 55 43 H85 Q97 43 97 54 V145 Q97 158 84 158 H56 Q43 158 43 145 Z';
+ const capW=cap===0?28:cap===1?36:cap===2?24:32;
+ const label=p.name.replace(/&/g,'&amp;').slice(0,18);
+ return `<svg viewBox="0 0 140 190" role="img" aria-label="صورة عطر ${label}">
+ <defs>
+  <linearGradient id="glass${p.id}" x1="0" x2="1"><stop stop-color="hsl(${hue},38%,12%)"/><stop offset=".48" stop-color="hsl(${hue},45%,37%)"/><stop offset="1" stop-color="hsl(${hue2},40%,12%)"/></linearGradient>
+  <linearGradient id="metal${p.id}" x1="0" x2="1"><stop stop-color="#76501e"/><stop offset=".45" stop-color="#f6d78e"/><stop offset="1" stop-color="#946323"/></linearGradient>
+  <filter id="shadow${p.id}"><feGaussianBlur stdDeviation="5"/></filter>
+ </defs>
+ <ellipse cx="70" cy="168" rx="43" ry="8" fill="#000" opacity=".65" filter="url(#shadow${p.id})"/>
+ <path d="M57 41 V27 Q57 20 64 20 H76 Q83 20 83 27 V42" fill="url(#metal${p.id})" stroke="#e4c27b"/>
+ <rect x="${70-capW/2}" y="8" width="${capW}" height="15" rx="3" fill="url(#metal${p.id})" stroke="#f2d18a"/>
+ <path d="${bottleShape}" fill="url(#glass${p.id})" stroke="#d5b36e" stroke-width="2"/>
+ <path d="M47 60 Q48 49 58 49" fill="none" stroke="#fff2c8" stroke-width="3" opacity=".38"/>
+ <rect x="43" y="87" width="54" height="34" rx="3" fill="#100d09" stroke="#d3ad63" stroke-width="1.2"/>
+ <text x="70" y="100" fill="#f3d58d" font-size="7" text-anchor="middle" font-family="Georgia">PERFUME</text>
+ <text x="70" y="110" fill="#f3d58d" font-size="6" text-anchor="middle" font-family="Georgia">FOR YOU</text>
+ <text x="70" y="117" fill="#d8c49b" font-size="4.5" text-anchor="middle">${p.id.toString().padStart(2,'0')}</text>
+ <path d="M50 133 H90" stroke="#fff" opacity=".14"/>
+ </svg>`;
+}
+function renderProducts(){let q=document.getElementById('search').value.toLowerCase();let list=products.filter(p=>(filter==='الكل'||p.type===filter)&&(p.name.toLowerCase().includes(q)||p.desc.includes(q)));document.getElementById('products').innerHTML=list.map(p=>`<article class="card"><div class="product-art"><img
+  src="https://tse1.mm.bing.net/th?q=${encodeURIComponent(p.name+' '+p.brand+' official perfume bottle')}&w=520&h=520&c=7&rs=1&p=0"
+  alt="صورة ${p.name}"
+  loading="lazy"
+  referrerpolicy="no-referrer"
+  style="width:100%;height:100%;object-fit:contain;background:#fff"
+  onerror="this.style.display='none';this.parentElement.innerHTML='<div style=&quot;color:#bfa36a;font-size:42px&quot;>✦</div>'">
+</div><div class="card-body"><div class="tag">${p.type} • PERFUME FOR YOU</div><h3>${p.name}</h3><div class="desc">${p.desc}</div><a href="${p.source}" target="_blank" rel="noopener" style="display:inline-block;color:#e8c77e;font-size:11px;margin-top:6px">صفحة الماركة الرسمية ↗</a><div class="price-row"><span class="price">40 د.ت</span><button class="add" onclick="addToCart(${p.id})">أضف +</button></div></div></article>`).join('')||'<p>لا توجد نتائج.</p>'}
+function setFilter(f,el){filter=f;document.querySelectorAll('.chip').forEach(x=>x.classList.remove('active'));el.classList.add('active');renderProducts()}
+function saveCart(){localStorage.setItem('pfy_cart',JSON.stringify(cart));document.getElementById('cartCount').textContent=Object.values(cart).reduce((a,b)=>a+b,0)}
+function addToCart(id){cart[id]=(cart[id]||0)+1;saveCart();toast('تمت إضافة العطر إلى السلة')}
+function toast(msg){let n=document.createElement('div');n.textContent=msg;n.style='position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#d6a84f;color:#17110a;padding:12px 20px;border-radius:30px;z-index:50;font-weight:bold';document.body.append(n);setTimeout(()=>n.remove(),1800)}
+function openCart(){renderCart();showModal('cartModal')}
+function renderCart(){let entries=Object.entries(cart).filter(([id,q])=>q>0);document.getElementById('cartItems').innerHTML=entries.length?entries.map(([id,q])=>{let p=products.find(x=>x.id==id);return `<div class="cartline"><div><b>${p.name}</b><br><span class="muted">${p.type}</span></div><div class="qty"><button onclick="changeQty(${id},-1)">−</button> ${q} <button onclick="changeQty(${id},1)">+</button></div><b>${q*40} د.ت</b></div>`}).join(''):'<p class="muted">السلة فارغة حاليًا.</p>';let total=Object.values(cart).reduce((a,b)=>a+b,0)*40;document.getElementById('cartTotal').textContent=total+' د.ت'}
+function changeQty(id,d){cart[id]=(cart[id]||0)+d;if(cart[id]<=0)delete cart[id];saveCart();renderCart()}
+function checkout(){if(!Object.keys(cart).length){toast('السلة فارغة');return}closeModal('cartModal');document.getElementById('checkoutTotal').textContent=Object.values(cart).reduce((a,b)=>a+b,0)*40+' د.ت';showModal('checkoutModal')}
+function submitOrder(e){e.preventDefault();let data=Object.fromEntries(new FormData(e.target).entries());let items=Object.entries(cart).map(([id,q])=>({name:products.find(p=>p.id==id).name,qty:q,subtotal:q*40}));let order={id:'PFY-'+Date.now().toString().slice(-7),date:new Date().toLocaleString('ar-TN'),customer:data,items,total:items.reduce((a,x)=>a+x.subtotal,0),status:'جديد'};orders.unshift(order);localStorage.setItem('pfy_orders',JSON.stringify(orders));cart={};saveCart();e.target.reset();closeModal('checkoutModal');document.getElementById('successText').textContent='رقم الطلب: '+order.id+' — تم حفظ الطلب في لوحة التحكم على هذا الجهاز.';showModal('successModal')}
+function openAdmin(){
+ const saved=localStorage.getItem('pfy_admin_password');
+ const first=!saved;
+ document.getElementById('adminLoginTitle').textContent=first?'إنشاء كلمة مرور الإدارة':'دخول صاحب المتجر';
+ document.getElementById('adminLoginHint').textContent=first?'أنشئ كلمة مرور خاصة بك لحماية لوحة التحكم على هذا المتصفح.':'أدخل كلمة مرور لوحة التحكم.';
+ document.getElementById('adminPasswordLabel').textContent=first?'كلمة مرور جديدة':'كلمة المرور';
+ document.getElementById('adminLoginButton').textContent=first?'حفظ وفتح اللوحة':'دخول';
+ document.getElementById('adminPassword').value='';
+ document.getElementById('adminLoginModal').dataset.first=first?'1':'0';
+ showModal('adminLoginModal');
+}
+function adminLogin(e){
+ e.preventDefault();
+ const input=document.getElementById('adminPassword').value;
+ const first=document.getElementById('adminLoginModal').dataset.first==='1';
+ if(first){localStorage.setItem('pfy_admin_password',input);closeModal('adminLoginModal');renderAdmin();showModal('adminModal');toast('تم إنشاء كلمة مرور الإدارة');return}
+ if(input===localStorage.getItem('pfy_admin_password')){closeModal('adminLoginModal');renderAdmin();showModal('adminModal')}
+ else{toast('كلمة المرور غير صحيحة')}
+}
+function renderAdmin(){document.getElementById('statAll').textContent=orders.length;document.getElementById('statNew').textContent=orders.filter(o=>o.status==='جديد').length;document.getElementById('statDone').textContent=orders.filter(o=>o.status==='تم التسليم').length;document.getElementById('adminOrders').innerHTML=orders.length?orders.map(o=>`<div class="card" style="padding:13px;margin:10px 0"><b style="color:var(--gold2)">${o.id}</b> <span class="muted">${o.date}</span><p>${o.customer.name} — ${o.customer.phone}<br>${o.customer.city}، ${o.customer.address}</p><div>${o.items.map(i=>`${i.name} × ${i.qty}`).join('، ')}</div><div class="total"><span>${o.total} د.ت</span><select onchange="updateStatus('${o.id}',this.value)" style="background:#090909;color:white;border:1px solid var(--line);padding:8px;border-radius:8px"><option ${o.status==='جديد'?'selected':''}>جديد</option><option ${o.status==='تم التأكيد'?'selected':''}>تم التأكيد</option><option ${o.status==='تم الشحن'?'selected':''}>تم الشحن</option><option ${o.status==='تم التسليم'?'selected':''}>تم التسليم</option></select></div></div>`).join(''):'<p class="muted">لا توجد طلبات بعد. الطلبات التجريبية ستظهر هنا.</p>'}
+function updateStatus(id,s){orders=orders.map(o=>o.id===id?{...o,status:s}:o);localStorage.setItem('pfy_orders',JSON.stringify(orders));renderAdmin()}
+function clearOrders(){if(confirm('هل تريد مسح كل طلبات التجربة؟')){orders=[];localStorage.setItem('pfy_orders','[]');renderAdmin()}}
+function showModal(id){document.getElementById(id).style.display='flex'}function closeModal(id){document.getElementById(id).style.display='none'}
+document.querySelectorAll('.overlay').forEach(x=>x.addEventListener('click',e=>{if(e.target===x)x.style.display='none'}));
+renderProducts();saveCart();
+</script>
+</body></html>
